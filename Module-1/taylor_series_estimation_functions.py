@@ -1,6 +1,9 @@
 """Question 4 of homework."""
 import math
 
+# Define a constant for the error message
+ERROR_MESSAGE = 'The number of n must be greater than 0'
+
 
 def taylor_series_sin(x, n):
     """
@@ -12,7 +15,7 @@ def taylor_series_sin(x, n):
     """
     # Condition of n
     if n <= 0:
-        return 'The number of n must be greater than 0'
+        return ERROR_MESSAGE
 
     # Initiation of sin(x)
     sin_x = 0
@@ -36,7 +39,7 @@ def taylor_series_cos(x, n):
     """
     # Condition of n
     if n <= 0:
-        return 'The number of n must be greater than 0'
+        return ERROR_MESSAGE
 
     # Initiation of cos(x)
     cos_x = 0
@@ -60,7 +63,7 @@ def taylor_series_sinh(x, n):
     """
     # Condition of n
     if n <= 0:
-        return 'The number of n must be greater than 0'
+        return ERROR_MESSAGE
 
     # Initiation of sinh(x)
     sinh_x = 0
@@ -84,7 +87,7 @@ def taylor_series_cosh(x, n):
     """
     # Condition of n
     if n <= 0:
-        return 'The number of n must be greater than 0'
+        return ERROR_MESSAGE
 
     # Initiation of cosh(x)
     cosh_x = 0
