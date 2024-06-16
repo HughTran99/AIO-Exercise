@@ -33,7 +33,8 @@ def f1_score_evaluation(tp, fp, fn):
 
 
 # Assertion check
-assert round(f1_score_evaluation(tp=2, fp=3, fn=4), 2) == 0.36
+assert math.isclose(round(f1_score_evaluation(
+    tp=2, fp=3, fn=4), 2), 0.36, rel_tol=1e-9)
 
 # Test F1 score result
 print(f1_score_evaluation(tp=4, fp=9, fn=6))
