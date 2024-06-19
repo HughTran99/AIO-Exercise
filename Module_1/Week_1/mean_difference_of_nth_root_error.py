@@ -1,4 +1,5 @@
 """Question 5 of homework."""
+import math
 
 
 def md_nre_single_sample(y, y_hat, n, p):
@@ -29,7 +30,7 @@ def md_nre_single_sample(y, y_hat, n, p):
 
 # Assertion of the function
 result = round(md_nre_single_sample(y=100, y_hat=99.5, n=2, p=1), 2)
-assert result == 0.03
+assert math.isclose(result, 0.03, rel_tol=1e-9)
 
 # Print the function with some test values
 print(md_nre_single_sample(y=50, y_hat=49.5, n=2, p=1))

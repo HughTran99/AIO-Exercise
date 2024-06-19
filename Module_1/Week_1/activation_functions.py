@@ -40,4 +40,5 @@ def calc_activation_function(x, activation_function):
 # Example of the function
 print(calc_activation_function(2, 'belu'))
 print(calc_activation_function('asd', 'relu'))
+print(calc_activation_function(2, 'sigmoid'))
 print(calc_activation_function(-1, 'elu'))

@@ -1,4 +1,5 @@
 """Question 1 of homework."""
+import math
 
 
 def f1_score_evaluation(tp, fp, fn):
@@ -11,7 +12,7 @@ def f1_score_evaluation(tp, fp, fn):
     fn (int): False negative
     """
     # Check the function to make sure that tp, fp, and fn are integers
-    if type(tp) != int or type(fp) != int or type(fn) != int:
+    if not isinstance(tp, int) or not isinstance(fp, int) or not isinstance(fn, int):
         return 'tp, fp, and fn must be int'
 
     # Check the function to make sure that tp, fp, and fn are greater than 0
@@ -32,7 +33,8 @@ def f1_score_evaluation(tp, fp, fn):
 
 
 # Assertion check
-assert round(f1_score_evaluation(tp=2, fp=3, fn=4), 2) == 0.36
+assert math.isclose(round(f1_score_evaluation(
+    tp=2, fp=3, fn=4), 2), 0.36, rel_tol=1e-9)
 
 # Test F1 score result
 print(f1_score_evaluation(tp=4, fp=9, fn=6))
